@@ -15,10 +15,9 @@ public class AgeCalculator {
 		System.out.print("How old are you now? ");
 
 		// user inputs age
-		int currentAge = scan.nextInt();
+		int currentAge = Validator.getValidInt(1, 130);
 		while (choice.equalsIgnoreCase("y")) {
-			// Ask the user for the year they would like to know how old they
-			// were in
+			// Ask the user for the year they would like to know how old they were in
 			System.out.print("What year do you want to know how old you were, are, or will be in?: ");
 			int inputYear = scan.nextInt();
 
@@ -32,7 +31,7 @@ public class AgeCalculator {
 			if (ageThen > 1 && inputYear > 2016) {
 				System.out.println("You will be " + ageThen + " years old in " + inputYear + ".");
 			} else if (ageThen == 1) {
-				System.out.println("You are " + ageThen + "  year old in " + inputYear + ".");
+				System.out.println("You were " + ageThen + "  year old in " + inputYear + ".");
 			} else if (inputYear < (currentYear - currentAge)) {
 				System.out.println("You had not been born yet.");
 			} else if (inputYear < 2016) {
@@ -40,7 +39,7 @@ public class AgeCalculator {
 			}
 			// ask the user if they'd like to enter another year
 
-			choice = Validator.getString("Would you like to enter another year?(y/n):");
+			choice = Validator.getString("\nWould you like to enter another year?(y/n):");
 		}
 	}
 }

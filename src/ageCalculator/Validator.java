@@ -40,20 +40,20 @@ public static String getString(String prompt)
  }
 
 
-public static double readValidDouble() {
-while (!s.hasNextDouble()) {
+public static int readValidInt() {
+while (!s.hasNextInt()) {
 	s.nextLine();
 	System.out.print("Please make a valid selection! Enter a number: ");
 }
-double x = s.nextDouble();
+int x = s.nextInt();
 s.nextLine();
 return x;
 }
-public static double getValidDouble(double min, double max) {
-double input = readValidDouble();
+public static int getValidInt(int min, int max) {
+int input = readValidInt();
 while (input < min || input > max) {
-	System.out.print("Please pick a number within range (1-100):");
-	input = readValidDouble();
+	System.out.print("Please pick a number within range (1-130):");
+	input = readValidInt();
 }
 return input;
 }
