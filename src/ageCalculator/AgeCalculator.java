@@ -35,6 +35,8 @@ public class AgeCalculator {
 			int ageThen = currentAge + yearsToAdd;
 
 			// display the users age and the year the user input
+			if (ageThen > 1 && inputYear == 2016 && userMonth > currmonth) {
+				System.out.println("You are "+ageThen+ " years old. You will be " + (ageThen+1) + " years old in month " + userMonth +" of "+ inputYear + ".");}
 			if (ageThen > 1 && inputYear > 2016) {
 				System.out.println("You will be " + ageThen + " years old in " + inputYear + ".");
 			} else if (ageThen == 1) {
