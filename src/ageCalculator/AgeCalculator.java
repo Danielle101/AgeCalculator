@@ -7,16 +7,22 @@ import java.util.*;
 public class AgeCalculator {
 
 	public static void main(String[] args) {
-		String choice = "y";
+        Calendar cal = Calendar.getInstance();
+        String choice = "y";
 		Scanner scan = new Scanner(System.in);
 		// Gets current year
 		int currentYear = LocalDate.now().getYear();
+		//gets current month
+        int currmonth = cal.get(cal.MONTH);
+
 
 		// Ask user for age input
 		System.out.print("How old are you now? ");
 
 		// user inputs age
 		int currentAge = Validator.getValidInt(1, 130);
+		System.out.println("What month were you born?(1-12):");
+		int userMonth = scan.nextInt();
 		while (choice.equalsIgnoreCase("y")) {
 			// Ask the user for the year they would like to know how old they were in
 			System.out.print("What year do you want to know how old you were, are, or will be in?: ");
