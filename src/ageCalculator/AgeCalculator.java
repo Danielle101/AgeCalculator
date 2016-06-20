@@ -21,11 +21,11 @@ public class AgeCalculator {
 
 		// user inputs age
 		int currentAge = Validator.getValidInt(1, 130);
-		System.out.println("What month were you born?(1-12):");
+		System.out.println("Please enter the month your were born?(1-12):");
 		int userMonth = scan.nextInt();
 		while (choice.equalsIgnoreCase("y")) {
 			// Ask the user for the year they would like to know how old they were in
-			System.out.print("What year do you want to know how old you were, are, or will be in?: ");
+			System.out.print("What is the year you want to know how old you were, are, or will be in?: ");
 			int inputYear = scan.nextInt();
 
 			// calculate how many years to add to the user's current age.
